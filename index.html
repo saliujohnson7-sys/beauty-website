@@ -86,7 +86,16 @@ header{
     font-size:28px;
     letter-spacing:2px;
 }
-
+.menu-icon{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+@media(max-width:768px){
+    .menu-icon{
+        display:block;
+    }
+}
 nav ul{
     display:flex;
     list-style:none;
@@ -372,6 +381,7 @@ Free worldwide shipping on orders above $250
 
 <header>
 <div class="logo">VELORA</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
 <nav>
 <ul>
 <li><a href="#collections">Shop</a></li>
@@ -559,6 +569,9 @@ const observer = new IntersectionObserver(entries=>{
 document.querySelectorAll('.fade').forEach(section=>{
     observer.observe(section);
 });
+    function toggleMenu(){
+    document.querySelector("nav ul").classList.toggle("active");
+}
 </script>
 
 </body>

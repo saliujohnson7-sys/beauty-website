@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velora Hair</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#faf8f4;
+    --white:#ffffff;
+    --text:#111111;
+    --muted:#777;
+    --accent:#c7a26a;
+    --border:#e8e2d8;
+    --shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+section{
+    padding:100px 8%;
+}
+
+h1,h2,h3{
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+}
+
+.announcement{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:12px;
+    font-size:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    background:rgba(255,255,255,0.95);
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:1px solid var(--border);
+}
+
+.logo{
+    font-size:28px;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    position:relative;
+    font-size:15px;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:1px;
+    background:var(--accent);
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    min-height:90vh;
+}
+
+.hero h1{
+    font-size:70px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    color:var(--muted);
+    margin-bottom:35px;
+    font-size:18px;
+    max-width:500px;
+}
+
+.btns{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:14px 28px;
+    border-radius:50px;
+    transition:.3s;
+    cursor:pointer;
+    display:inline-block;
+}
+
+.primary{
+    background:#111;
+    color:#fff;
+}
+
+.primary:hover{
+    background:var(--accent);
+}
+
+.secondary{
+    border:1px solid #111;
+}
+
+.secondary:hover{
+    background:#111;
+    color:#fff;
+}
+
+.hero img{
+    border-radius:24px;
+    box-shadow:var(--shadow);
+}
+
+.values{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    text-align:center;
+}
+
+.value-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:48px;
+}
+
+.collections-grid,
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    height:320px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+    text-align:center;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.story{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.story img{
+    border-radius:24px;
+}
+
+.story h2{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.story p{
+    color:var(--muted);
+    margin-bottom:30px;
+}
+
+.product-price{
+    color:var(--accent);
+    margin:12px 0;
+    font-weight:600;
+}
+
+.testimonial{
+    background:#fff;
+    text-align:center;
+    border-radius:30px;
+    padding:70px;
+    box-shadow:var(--shadow);
+}
+
+.testimonial p{
+    font-size:30px;
+    font-family:'Playfair Display',serif;
+    margin-bottom:20px;
+}
+
+.newsletter{
+    text-align:center;
+}
+
+.newsletter h2{
+    font-size:46px;
+    margin-bottom:20px;
+}
+
+.newsletter form{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:30px;
+}
+
+.newsletter input{
+    padding:16px 20px;
+    width:320px;
+    border:1px solid var(--border);
+    border-radius:50px;
+    outline:none;
+}
+
+footer{
+    background:#111;
+    color:#fff;
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+footer h3{
+    margin-bottom:20px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:12px;
+    color:#ccc;
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:992px){
+    .hero,
+    .story,
+    .collections-grid,
+    .products-grid,
+    .values,
+    footer{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+}
+
+@media(max-width:768px){
+    nav{
+        display:none;
+    }
+
+    .hero,
+    .story,
+    .collections-grid,
+    .products-grid,
+    .values,
+    footer{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .newsletter form{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="announcement">
+Free worldwide shipping on orders above $250
+</div>
+
+<header>
+<div class="logo">VELORA</div>
+<nav>
+<ul>
+<li><a href="#collections">Shop</a></li>
+<li><a href="beautyabout.html">About</a></li>
+<li><a href="beautyshop.html">Products</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero fade">
+<div>
+<h1>Luxury Hair Crafted For Women Who Own The Room</h1>
+<p>Premium raw hair extensions designed for elegance, confidence, and timeless beauty.</p>
+<div class="btns">
+<a href="beautyshop.html" class="btn primary">Shop Collection</a>
+<a href="#" class="btn secondary">Explore Story</a>
+</div>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="">
+</div>
+</section>
+
+<section class="values fade">
+<div class="value-card">
+<h3>Ethically Sourced</h3>
+<p>Responsibly selected luxury-grade hair.</p>
+</div>
+<div class="value-card">
+<h3>100% Virgin Hair</h3>
+<p>Natural shine and premium softness.</p>
+</div>
+<div class="value-card">
+<h3>Worldwide Delivery</h3>
+<p>Fast shipping to global clients.</p>
+</div>
+</section>
+
+<section id="collections" class="fade">
+<div class="section-title">
+<h2>Featured Collections</h2>
+</div>
+<div class="collections-grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="">
+<div class="card-content">
+<h3>Straight Hair</h3>
+</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df" alt="">
+<div class="card-content">
+<h3>Body Wave</h3>
+</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=80" alt="Curly Hair">
+<div class="card-content">
+<h3>Curly Hair</h3>
+</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="">
+<div class="card-content">
+<h3>Closures</h3>
+</div>
+</div>
+</div>
+</section>
+
+<section id="story" class="story fade">
+<div>
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518" alt="">
+</div>
+<div>
+<h2>Crafted For Timeless Beauty</h2>
+<p>Every strand is selected to create a premium beauty experience for women who expect luxury in every detail.</p>
+<a href="#" class="btn primary">Discover Our Story</a>
+</div>
+</section>
+
+<section id="products" class="fade">
+<div class="section-title">
+<h2>Best Sellers</h2>
+</div>
+<div class="products-grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91" alt="">
+<div class="card-content">
+<h3>Deep Wave</h3>
+<div class="product-price">$180</div>
+<a class="btn primary">Add To Cart</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="">
+<div class="card-content">
+<h3>Raw Straight Bundle</h3>
+<div class="product-price">$210</div>
+<a href="beautyproduct.html" class="btn primary">Add To Cart</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="">
+<div class="card-content">
+<h3>Luxury Closure</h3>
+<div class="product-price">$150</div>
+<a class="btn primary">Add To Cart</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="">
+<div class="card-content">
+<h3>Curly Frontal</h3>
+<div class="product-price">$190</div>
+<a class="btn primary">Add To Cart</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="fade">
+<div class="testimonial">
+<p>"The quality exceeded every luxury brand I have tried."</p>
+<span>- Amelia R.</span>
+</div>
+</section>
+
+<section class="newsletter fade" id="contact">
+<h2>Join The Velora World</h2>
+<p>Subscribe for exclusive drops and premium updates.</p>
+<form>
+<input type="email" placeholder="Enter your email">
+<button class="btn primary">Subscribe</button>
+</form>
+</section>
+
+<footer>
+<div>
+<h3>VELORA</h3>
+<p>Luxury hair for modern elegance.</p>
+</div>
+<div>
+<h3>Shop</h3>
+<ul>
+<li>Bundles</li>
+<li>Closures</li>
+<li>Frontals</li>
+</ul>
+</div>
+<div>
+<h3>Company</h3>
+<ul>
+<li>About</li>
+<li>Shipping</li>
+<li>Returns</li>
+</ul>
+</div>
+<div>
+<h3>Follow</h3>
+<ul>
+<li>Instagram</li>
+<li>TikTok</li>
+<li>Pinterest</li>
+</ul>
+</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{
+    threshold: 0.15,
+    rootMargin: "0px 0px -80px 0px"
+});
+
+document.querySelectorAll('.fade').forEach(section=>{
+    observer.observe(section);
+});
+</script>
+
+</body>
+</html>
+</body>
+</html>

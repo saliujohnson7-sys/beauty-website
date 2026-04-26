@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velora Hair | Checkout</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#faf8f4;
+  --white:#ffffff;
+  --text:#111111;
+  --muted:#777;
+  --accent:#c7a26a;
+  --border:#e8e2d8;
+  --shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 8%;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 8%;
+  
+}
+
+.checkout-layout{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.checkout-form,
+.order-summary{
+  background:#fff;
+  padding:40px;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+}
+
+h2{
+  font-family:'Playfair Display',serif;
+  margin-bottom:30px;
+  font-size:34px;
+}
+
+.form-group{
+  margin-bottom:22px;
+}
+
+label{
+  display:block;
+  margin-bottom:8px;
+  font-size:14px;
+}
+
+input,
+select{
+  width:100%;
+  padding:15px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  font-size:15px;
+  outline:none;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.payment-options{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:20px;
+}
+
+.payment-card{
+  border:1px solid var(--border);
+  padding:16px;
+  border-radius:14px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.payment-card:hover,
+.payment-card.active{
+  border-color:var(--accent);
+}
+
+.order-item{
+  display:flex;
+  gap:15px;
+  margin-bottom:25px;
+  align-items:center;
+}
+
+.order-item img{
+  width:80px;
+  height:80px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.item-info h4{
+  margin-bottom:6px;
+}
+
+.item-info p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.summary-line{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:15px;
+}
+
+.total{
+  font-size:20px;
+  font-weight:600;
+  border-top:1px solid var(--border);
+  padding-top:20px;
+  margin-top:20px;
+}
+
+.place-order{
+  display: block;          /* IMPORTANT */
+  width: 100%;
+  text-align: center;      /* centers text in link */
+  padding: 18px;
+  background: #111;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;   /* removes underline */
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.place-order:hover{
+  background:var(--accent);
+}
+
+.success-message{
+  display:none;
+  margin-top:20px;
+  color:green;
+  font-weight:600;
+  text-align:center;
+}
+
+@media(max-width:768px){
+  .checkout-layout{
+    grid-template-columns:1fr;
+  }
+
+  .row{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">VELORA</div>
+  <a href="beauty.html">Back to Product</a>
+</header>
+
+<div class="container">
+  <div class="checkout-layout">
+
+    <div class="checkout-form">
+      <h2>Checkout</h2>
+
+      <div class="row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Jane">
+        </div>
+
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Doe">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="jane@email.com">
+      </div>
+
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" placeholder="Street address">
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" placeholder="London">
+        </div>
+
+        <div class="form-group">
+          <label>Country</label>
+          <select>
+            <option>United Kingdom</option>
+            <option>United States</option>
+            <option>Canada</option>
+            <option>Australia</option>
+          </select>
+        </div>
+      </div>
+
+      <h2>Payment</h2>
+
+      <div class="payment-options">
+        <div class="payment-card active">Credit / Debit Card</div>
+        <div class="payment-card">PayPal</div>
+        <div class="payment-card">Apple Pay</div>
+      </div>
+    </div>
+
+    <div class="order-summary">
+      <h2>Your Order</h2>
+
+      <div class="order-item">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="">
+        <div class="item-info">
+          <h4>Raw Straight Bundle</h4>
+          <p>16" Length × 1</p>
+        </div>
+      </div>
+
+      <div class="summary-line">
+        <span>Subtotal</span>
+        <span>$210</span>
+      </div>
+
+      <div class="summary-line">
+        <span>Shipping</span>
+        <span>$25</span>
+      </div>
+
+      <div class="summary-line total">
+        <span>Total</span>
+        <span>$235</span>
+      </div>
+
+      <a href="beautysuccess.html" class="place-order">Place Order</a>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.payment-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    document.querySelectorAll('.payment-card').forEach(c=>{
+      c.classList.remove('active');
+    });
+    card.classList.add('active');
+  });
+});
+
+function placeOrder(){
+  
+}
+</script>
+
+</body>
+</html>

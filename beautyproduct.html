@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velora Hair | Product</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#faf8f4;
+  --white:#fff;
+  --text:#111;
+  --muted:#777;
+  --accent:#c7a26a;
+  --border:#e8e2d8;
+  --shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 8%;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 8%;
+}
+
+.product-page{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.gallery{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.main-image{
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.thumbnail-row{
+  display:flex;
+  gap:15px;
+}
+
+.thumbnail-row img{
+  width:100px;
+  height:100px;
+  object-fit:cover;
+  border-radius:12px;
+  cursor:pointer;
+  border:2px solid transparent;
+}
+
+.thumbnail-row img:hover{
+  border-color:var(--accent);
+}
+
+.product-info h1{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.price{
+  font-size:24px;
+  color:var(--accent);
+  margin-bottom:25px;
+  font-weight:600;
+}
+
+.description{
+  color:var(--muted);
+  margin-bottom:35px;
+  line-height:1.8;
+}
+
+.option-group{
+  margin-bottom:30px;
+}
+
+.option-group h3{
+  margin-bottom:15px;
+  font-size:16px;
+}
+
+.length-options{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.length-btn{
+  padding:12px 18px;
+  border:1px solid var(--border);
+  border-radius:50px;
+  cursor:pointer;
+  background:#fff;
+  transition:.3s;
+}
+
+.length-btn:hover,
+.length-btn.active{
+  background:#111;
+  color:#fff;
+}
+
+.quantity{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.qty-btn{
+  width:40px;
+  height:40px;
+  border:none;
+  background:#fff;
+  border:1px solid var(--border);
+  cursor:pointer;
+  border-radius:50%;
+  font-size:18px;
+}
+
+.add-cart{
+  display:block;
+  width:100%;
+  text-align:center;
+  background:#111;
+  color:#fff;
+  padding:18px;
+  border-radius:50px;
+  margin-top:35px;
+  transition:.3s;
+}
+
+.add-cart:hover{
+  background:var(--accent);
+}
+
+.trust{
+  margin-top:35px;
+  display:grid;
+  gap:15px;
+  color:var(--muted);
+}
+
+.related{
+  margin-top:100px;
+}
+
+.related h2{
+  font-family:'Playfair Display',serif;
+  text-align:center;
+  margin-bottom:50px;
+  font-size:42px;
+}
+
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+.card img{
+  height:320px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:20px;
+}
+
+@media(max-width:768px){
+  .product-page,
+  .related-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-info h1{
+    font-size:36px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">VELORA</div>
+  <a href="beauty.html">Back Home</a>
+</header>
+
+<div class="container">
+
+  <div class="product-page">
+
+    <div class="gallery">
+      <div class="main-image">
+        <img id="mainProductImage" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="">
+      </div>
+
+      <div class="thumbnail-row">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" onclick="changeImage(this.src)">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" onclick="changeImage(this.src)">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" onclick="changeImage(this.src)">
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1>Raw Straight Bundle</h1>
+      <div class="price">$210</div>
+
+      <p class="description">
+        Premium virgin straight hair with unmatched softness, shine, and durability.
+        Designed for women who demand luxury in every detail.
+      </p>
+
+      <div class="option-group">
+        <h3>Select Length</h3>
+        <div class="length-options">
+          <button class="length-btn active">12"</button>
+          <button class="length-btn">16"</button>
+          <button class="length-btn">20"</button>
+          <button class="length-btn">24"</button>
+        </div>
+      </div>
+
+      <div class="option-group">
+        <h3>Quantity</h3>
+        <div class="quantity">
+          <button class="qty-btn" onclick="updateQty(-1)">-</button>
+          <span id="qty">1</span>
+          <button class="qty-btn" onclick="updateQty(1)">+</button>
+        </div>
+      </div>
+
+      <a href="beautycheckout.html" class="add-cart">Add To Cart</a>
+
+      <div class="trust">
+        <span>✓ Free worldwide shipping</span>
+        <span>✓ Secure checkout</span>
+        <span>✓ Premium quality guarantee</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="related">
+    <h2>You May Also Like</h2>
+
+    <div class="related-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f">
+        <div class="card-content">
+          <h3>Body Wave</h3>
+          <p>$210</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+        <div class="card-content">
+          <h3>Curly Bundle</h3>
+          <p>$195</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2">
+        <div class="card-content">
+          <h3>Luxury Closure</h3>
+          <p>$150</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function changeImage(src){
+  document.getElementById('mainProductImage').src = src;
+}
+
+let qty = 1;
+
+function updateQty(change){
+  qty += change;
+  if(qty < 1) qty = 1;
+  document.getElementById('qty').textContent = qty;
+}
+
+document.querySelectorAll('.length-btn').forEach(button=>{
+  button.addEventListener('click',()=>{
+    document.querySelectorAll('.length-btn').forEach(btn=>{
+      btn.classList.remove('active');
+    });
+    button.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
